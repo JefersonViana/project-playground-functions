@@ -137,6 +137,27 @@ function fizzBuzz(param) {
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9 - Crie a função encode e a função decode
+function encode(words) {
+  let word = words.split('a').join('1');
+  let word1 = word.split('e').join('2');
+  let word2 = word1.split('i').join('3');
+  let word3 = word2.split('o').join('4');
+  let word4 = word3.split('u').join('5');
+  return word4;
+}
+
+console.log(encode('go trybe'));
+
+function decode(phrases) {
+  let phrase = phrases.split('1').join('a');
+  let phrase1 = phrase.split('2').join('e');
+  let phrase2 = phrase1.split('3').join('i');
+  let phrase3 = phrase2.split('4').join('o');
+  let phrase4 = phrase3.split('5').join('u');
+  return phrase4;
+}
+
+console.log(decode('go trybe'));
 
 // Desafio 10 - Crie a função techList
 
