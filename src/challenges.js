@@ -67,12 +67,6 @@ function calcRectangleArea(base, height) {
 console.log(calcRectangleArea(10, 50));
 
 function calcAllAreas(base, height, form) {
-  function calcTriangleArea (base, height) {
-    return (base * height) / 2;
-  }
-  function calcRectangleArea(base, height) {
-    return base * height;
-  }
   if (form === 'triângulo') {
     return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
   } else if (form === 'retângulo') {
@@ -84,7 +78,45 @@ function calcAllAreas(base, height, form) {
 
 console.log(calcAllAreas(10, 50, 'retângulo'));
 // Desafio 7 - Crie a função catAndMouse
+function catAndMouse(mouse, cat1, cat2) {
+  let result1 = 0;
+  let result2 = 0;
 
+  if (cat1 === cat2) {
+    return 'Os gatos trombam e o rato foge';
+  } else if (cat1 > mouse && mouse > cat2) {
+    result1 = cat1 - mouse;
+    result2 = mouse - cat2;
+    if (result1 < result2) {
+      return 'cat1';
+    } else if (result1 === result2) {
+      return 'Os gatos trombam e o rato foge';
+    } else {
+      return 'cat2';
+    }
+  } else if (cat2 > mouse && mouse > cat1) {
+    result1 = mouse - cat1;
+    result2 = cat2 - mouse;
+    if (result2 < result1) {
+      return 'cat2';
+    } else if (result1 === result2) {
+      return 'os gatos trombam e o rato foge';
+    } else {
+      return 'cat1';
+    }
+  } else if (mouse > cat1 && cat1 > cat2) {
+    return cat1;
+  } else if (mouse > cat2 && cat2 > cat1) {
+    return cat2;
+  } else if (mouse < cat1 && cat1 < cat2) {
+    return cat1;
+  } else if (mouse < cat2 && cat2 < cat1) {
+    return 'cat2';
+  }
+
+}
+
+console.log(catAndMouse(0, 3, 2));
 // Desafio 8 - Crie a função fizzBuzz
 
 // Desafio 9 - Crie a função encode e a função decode
