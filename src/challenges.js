@@ -26,7 +26,12 @@ function concatName(params) {
 
 console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 4 - Crie a função footballPoints
+function footballPoints(wins, ties) {
+  let resultado = wins * 3 + ties;
+  return resultado;
+}
 
+console.log(footballPoints(14, 8));
 // Desafio 5 - Crie a função highestCount
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
