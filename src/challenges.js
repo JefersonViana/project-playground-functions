@@ -16,7 +16,15 @@ function splitSentence(params) {
 
 console.log(splitSentence('go Trybe'));
 // Desafio 3 - Crie a função concatName
+function concatName(params) {
+  const name = [];
+  for (let index = 0; index < params.length; index += 1) {
+    name.push(params[index]);
+  }
+  return `${name[name.length - 1]}, ${name[0]}`;
+}
 
+console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 4 - Crie a função footballPoints
 
 // Desafio 5 - Crie a função highestCount
