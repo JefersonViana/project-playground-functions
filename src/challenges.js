@@ -33,7 +33,23 @@ function footballPoints(wins, ties) {
 
 console.log(footballPoints(14, 8));
 // Desafio 5 - Crie a função highestCount
+function highestCount(params) {
+  let higherNumber = 0;
+  let amountOfRep = 0;
+  for (let index = 0; index < params.length; index += 1) {
+      if (params[index] > higherNumber ) {
+        higherNumber = params[index];
+      }
+  }
+  for (let index = 0; index < params.length; index += 1) {
+    if (params[index] === higherNumber) {
+      amountOfRep += 1;
+    }
+  }
+  return amountOfRep;
+}
 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 // Desafio 7 - Crie a função catAndMouse
