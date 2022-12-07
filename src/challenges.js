@@ -160,7 +160,19 @@ function decode(phrases) {
 console.log(decode('go trybe'));
 
 // Desafio 10 - Crie a função techList
+function techList(string, name) {
+  string = string.sort();
+  const objeto = [];
+  if (name === undefined ) {
+    return [];
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    objeto.push({name: name, tech: string[index]});
+  }
+  return objeto;
+}
 
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Jeferson'));
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
