@@ -22,7 +22,40 @@ function generatePhoneNumber(number) {
 
 console.log(generatePhoneNumber([7, 5, 4, 8, 9, 6, 1, 2, 3, 6, 8]));
 // Desafio 12 -  Crie a função triangleCheck
-
+function triangleCheck(lineA, lineB, lineC) {
+  let positivo = lineB - lineC;
+  let positivo1 = lineA - lineC;
+  let positivo2 = lineA - lineB
+  if (lineA > lineB + lineC) {
+    return false;
+  } else if (positivo < 0) {
+    positivo = (lineB - lineC) * -1;
+    if (positivo > lineA) {
+      return false;
+    } else if (lineA < lineB + lineC && lineA > positivo) {
+      return true;
+    }
+  } else if (lineB > lineA + lineC) {
+    return false;
+  } else if (positivo1 < 0) {
+    positivo1 = (lineA - lineC) * -1;
+    if (positivo1 > lineB) {
+      return false;
+    } else if (lineB < lineA + lineC && lineB > positivo1) {
+      return true;
+    }
+  } else if (lineC > lineA + lineB) {
+    return false;
+  } else if (positivo2 < 0) {
+    positivo2 = (lineA - lineB) * -1;
+    if (positivo2 > lineC) {
+      return false;
+    } else if (lineC < lineA + lineB && lineC > positivo2) {
+      return true;
+    }
+  }
+}
+console.log(triangleCheck(16, 20, 30));
 // Desafio 13 - Crie a função hydrate
 
 /* eslint no-undef: 0 */
