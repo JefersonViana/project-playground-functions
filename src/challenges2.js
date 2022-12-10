@@ -57,7 +57,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 console.log(triangleCheck(16, 20, 30));
 // Desafio 13 - Crie a função hydrate
+function hydrate(string) {
+  let regexep = /\d+/g;
+  let numberList = string.match(regexep);
+  let quantidadeCopos = 0;
 
+  for (let index = 0; index < numberList.length; index += 1) {
+    quantidadeCopos += parseInt(numberList[index]);
+  }
+  if (quantidadeCopos === 1) {
+    return `${quantidadeCopos} copo de água`
+  } else {
+    return `${quantidadeCopos} copos de água`;
+  }
+}
+
+console.log(hydrate('10 cachaça'));
 /* eslint no-undef: 0 */
 
 // Não modifique essas linhas
