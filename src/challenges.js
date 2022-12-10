@@ -1,7 +1,7 @@
 // Desafio 1 - Crie a função compareTrue
 function compareTrue(param1, param2) {
   // if (param1 === true && param2 === true) {
-    return param1 && param2;
+  return param1 && param2;
   // } else {
   //   return false;
   // }
@@ -113,7 +113,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (mouse < cat2 && cat2 < cat1) {
     return 'cat2';
   }
-
 }
 
 console.log(catAndMouse(0, 3, 2));
@@ -130,7 +129,6 @@ function fizzBuzz(param) {
     } else if (param[index] % 5 !== 0 && param[index] % 3 !== 0) {
       array.push('bug!');
     }
-    
   }
   return array;
 }
@@ -163,16 +161,16 @@ console.log(decode('go trybe'));
 function techList(string, name) {
   string = string.sort();
   const objeto = [];
-  if (name === undefined ) {
+  if (name === undefined) {
     return [];
   }
   for (let index = 0; index < string.length; index += 1) {
-    objeto.push({name: name, tech: string[index]});
+    objeto.push({ name, tech: string[index] });
   }
   return objeto;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Jeferson'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Jeferson'));
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
