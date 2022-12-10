@@ -25,7 +25,7 @@ console.log(generatePhoneNumber([7, 5, 4, 8, 9, 6, 1, 2, 3, 6, 8]));
 function triangleCheck(lineA, lineB, lineC) {
   let positivo = lineB - lineC;
   let positivo1 = lineA - lineC;
-  let positivo2 = lineA - lineB
+  let positivo2 = lineA - lineB;
   if (lineA > lineB + lineC) {
     return false;
   } else if (positivo < 0) {
@@ -63,13 +63,10 @@ function hydrate(string) {
   let quantidadeCopos = 0;
 
   for (let index = 0; index < numberList.length; index += 1) {
-    quantidadeCopos += parseInt(numberList[index]);
+    quantidadeCopos += parseInt(numberList[index], 10);
   }
-  if (quantidadeCopos === 1) {
-    return `${quantidadeCopos} copo de água`
-  } else {
-    return `${quantidadeCopos} copos de água`;
-  }
+  if (quantidadeCopos === 1) return `${quantidadeCopos} copo de água`;
+  return `${quantidadeCopos} copos de água`;
 }
 
 console.log(hydrate('10 cachaça'));
