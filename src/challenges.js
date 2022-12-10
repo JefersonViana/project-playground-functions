@@ -1,10 +1,10 @@
 // Desafio 1 - Crie a função compareTrue
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (param1 === true && param2 === true) {
+    return param1 && param2;
+  // } else {
+  //   return false;
+  // }
 }
 
 console.log(compareTrue(true, true));
@@ -38,9 +38,9 @@ function highestCount(params) {
   let amountOfRep = 0;
 
   for (let index = 0; index < params.length; index += 1) {
-      if (params[index] > higherNumber ) {
-        higherNumber = params[index];
-      }
+    if (params[index] > higherNumber) {
+      higherNumber = params[index];
+    }
   }
 
   for (let index = 0; index < params.length; index += 1) {
@@ -54,7 +54,7 @@ function highestCount(params) {
 
 console.log(highestCount([-2, -2, -1]));
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-function calcTriangleArea (base, height) {
+function calcTriangleArea(base, height) {
   return (base * height) / 2;
 }
 
@@ -69,11 +69,11 @@ console.log(calcRectangleArea(10, 50));
 function calcAllAreas(base, height, form) {
   if (form === 'triângulo') {
     return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
-  } else if (form === 'retângulo') {
-    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
-  } else {
-    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
   }
+  if (form === 'retângulo') {
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
+  }
+  return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
 }
 
 console.log(calcAllAreas(10, 50, 'retângulo'));
